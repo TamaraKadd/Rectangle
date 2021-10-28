@@ -3,8 +3,15 @@ color black=#000000, white=#FFFFFF, yellow=#FFF700, purple=#5F00C6, yellowNight=
 float x=displayWidth*1/4, y=displayHeight*1/4, widthRect=displayWidth*1/2;
 float heightRect=displayHeight*1/2;
 int thin=displayWidth*1/50, thick=2*thin;
+Boolean NightMode=true; //off for false.
 background(black);
-stroke(yellowNight);
 strokeWeight(thick);
+if (NightMode == true ) {
+stroke(yellowNight);
 fill(purpleNight);
+} else {
+  stroke(yellow);
+fill(purple);
+}
+
 rect(x, y, widthRect, heightRect);
